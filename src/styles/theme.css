@@ -1,3 +1,32 @@
+:root {
+  --color-primary-background: '#F7F7F7';
+  --color-secondary-background: '#FFFFFF';
+  --color-primary-font: '#212121';
+  --color-secondary-font: '#FFFFFF';
+  --color-border: '#E0E0E0';
+  --color-placeholder: '#666666';
+
+  --color-pokemon-fairy: '#E69EAC';
+  --color-pokemon-ice: '#9AD6DF';
+  --color-pokemon-grass: '#74CB48';
+  --color-pokemon-steal: '#B7B9D0';
+  --color-pokemon-rock: '#B69E31';
+  --color-pokemon-dark: '#75574C';
+  --color-pokemon-psychic: '#FB5584';
+  --color-pokemon-water: '#6493EB';
+  --color-pokemon-ghost: '#70559B';
+  --color-pokemon-ground: '#DEC16B';
+  --color-pokemon-dragon: '#7037FF';
+  --color-pokemon-electric: '#F9CF30';
+  --color-pokemon-fire: '#F57D31';
+  --color-pokemon-bug: '#A7B723';
+  --color-pokemon-poison: '#A43E9E';
+  --color-pokemon-flying: '#A891EC';
+  --color-pokemon-fighting: '#C12239';
+  --color-pokemon-normal: '#AAA67F';
+}
+
 body {
   font-family: 'Poppins', sans-serif;
+  color: var(--color-primary-font);
 }

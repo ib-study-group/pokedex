@@ -1,0 +1,36 @@
+body {
+  background-color: #333;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 50%;
+  margin: 0 auto;
+  background-color: #333;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #8883;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  border: 1px solid transparent;
+  will-change: filter;
+  transition: border, filter 300ms ease-in;
+  cursor: pointer;
+}
+
+.card:hover {
+  border: 1px solid #646cffaa;
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.card p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  color: white;
+}

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { Pokemon } from '../../domain/Pokemon';
 import { getPokemon } from '../../infra/pokemon/getPokemon';
-import { PokemonCard } from '../../components/PokemonCard/PokemonCard';
+import { PokemonList } from '../../components/PokemonList/PokemonList';
 
 import style from './Homepage.module.css';
 
@@ -22,12 +22,7 @@ const HomePage = () => {
   return (
     <main className={style.container}>
       {pokemon && (
-        <PokemonCard
-          id={pokemon.id}
-          name={pokemon.name}
-          sprite={pokemon.sprite}
-          type={pokemon.type}
-        />
+        <PokemonList pokemonsList={[pokemon, pokemon, pokemon, pokemon]} />
       )}
     </main>
   );

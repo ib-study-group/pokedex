@@ -1,7 +1,7 @@
-import { PokemonList } from './pages/PokemonList';
+import { HomePage } from './pages/HomePage';
 
 function App() {
-  return <PokemonList />;
+  return <HomePage />;
 }
 
 export default App;

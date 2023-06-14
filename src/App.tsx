@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-
-import styles from "./App.module.css";
+import { useEffect, useState } from 'react';
 
 type Pokemon = {
   id: number;
@@ -47,16 +45,16 @@ function App() {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <>
       {pokemon.map((pokemon) => {
         return (
-          <div key={pokemon.id} className={styles.card}>
+          <div key={pokemon.id}>
             <img src={pokemon.sprite} alt={pokemon.name} />
             <p>{pokemon.name}</p>
           </div>
         );
       })}
-    </div>
+    </>
   );
 }
 

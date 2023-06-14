@@ -1,29 +1,30 @@
 :root {
-  --color-primary-background: '#F7F7F7';
-  --color-secondary-background: '#FFFFFF';
-  --color-primary-font: '#212121';
-  --color-secondary-font: '#FFFFFF';
-  --color-border: '#E0E0E0';
-  --color-placeholder: '#666666';
+  --color-primary-background: #f7f7f7;
+  --color-secondary-background: #ffffff;
+  --color-primary-font: #212121;
+  --color-secondary-font: #ffffff;
+  --color-border: #e0e0e0;
+  --color-placeholder: #666666;
+  --color-wireframe: #b8b8b8;
 
-  --color-pokemon-fairy: '#E69EAC';
-  --color-pokemon-ice: '#9AD6DF';
-  --color-pokemon-grass: '#74CB48';
-  --color-pokemon-steal: '#B7B9D0';
-  --color-pokemon-rock: '#B69E31';
-  --color-pokemon-dark: '#75574C';
-  --color-pokemon-psychic: '#FB5584';
-  --color-pokemon-water: '#6493EB';
-  --color-pokemon-ghost: '#70559B';
-  --color-pokemon-ground: '#DEC16B';
-  --color-pokemon-dragon: '#7037FF';
-  --color-pokemon-electric: '#F9CF30';
-  --color-pokemon-fire: '#F57D31';
-  --color-pokemon-bug: '#A7B723';
-  --color-pokemon-poison: '#A43E9E';
-  --color-pokemon-flying: '#A891EC';
-  --color-pokemon-fighting: '#C12239';
-  --color-pokemon-normal: '#AAA67F';
+  --color-pokemon-fairy: #e69eac;
+  --color-pokemon-ice: #9ad6df;
+  --color-pokemon-grass: #74cb48;
+  --color-pokemon-steal: #b7b9d0;
+  --color-pokemon-rock: #b69e31;
+  --color-pokemon-dark: #75574c;
+  --color-pokemon-psychic: #fb5584;
+  --color-pokemon-water: #6493eb;
+  --color-pokemon-ghost: #70559b;
+  --color-pokemon-ground: #dec16b;
+  --color-pokemon-dragon: #7037ff;
+  --color-pokemon-electric: #f9cf30;
+  --color-pokemon-fire: #f57d31;
+  --color-pokemon-bug: #a7b723;
+  --color-pokemon-poison: #a43e9e;
+  --color-pokemon-flying: #a891ec;
+  --color-pokemon-fighting: #c12239;
+  --color-pokemon-normal: #aaa67f;
 }
 
 body {

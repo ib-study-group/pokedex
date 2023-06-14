@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { getPokemon } from '../infra/pokemon/getPokemon';
-import { Pokemon } from '../domain/Pokemon';
-import { PokemonCard } from '../components/PokemonCard/PokemonCard';
+import { getPokemon } from '../../infra/pokemon/getPokemon';
+import { Pokemon } from '../../domain/Pokemon';
+import { PokemonCard } from '../../components/PokemonCard/PokemonCard';
 
 const HomePage = () => {
   const [pokemon, setPokemon] = useState<Pokemon>();

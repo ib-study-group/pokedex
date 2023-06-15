@@ -1,7 +1,7 @@
-import { createContext, useEffect, useMemo, useState } from 'react';
+import { createContext, useEffect, useMemo, useState } from "react";
 
-import { Pokemon } from '../../domain/Pokemon';
-import { fetchManyPokemon } from '../../infrastructure/pokemon/fetchManyPokemon';
+import { Pokemon } from "../../domain/Pokemon";
+import { fetchManyPokemon } from "../../infrastructure/pokemon/fetchManyPokemon";
 
 type PokemonContextValue = {
   pokemon: Pokemon[];

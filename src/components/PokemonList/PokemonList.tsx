@@ -11,7 +11,7 @@ const PokemonList = ({ pokemonsList }: PokemonListProps) => {
   return (
     <ul className={styles.container}>
       {pokemonsList.map(({ id, name, sprite, type }) => (
-        <PokemonCard id={id} name={name} sprite={sprite} type={type} />
+        <PokemonCard id={id} name={name} sprite={sprite} type={type} key={id} />
       ))}
     </ul>
   );

@@ -1,8 +1,8 @@
 import styles from "./App.module.css";
-import { usePokemon } from "./view/hooks/usePokemon";
+import { usePagination } from "./view/hooks/usePagination";
 
 function App() {
-  const { pokemon } = usePokemon();
+  const { pokemon, nextPage, prevPage } = usePagination();
 
   return (
     <div className={styles.container}>
@@ -14,6 +14,8 @@ function App() {
           </div>
         );
       })}
+      <button onClick={prevPage}>Prev</button>
+      <button onClick={nextPage}>Next</button>
     </div>
   );
 }

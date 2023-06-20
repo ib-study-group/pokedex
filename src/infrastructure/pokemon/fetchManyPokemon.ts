@@ -1,4 +1,4 @@
-import { Pokemon } from "../domain/Pokemon";
+import { Pokemon } from "../../domain/Pokemon";
 import { fetchPokemon } from "./fetchPokemon";
 
 type FetchManyPokemonParams = {

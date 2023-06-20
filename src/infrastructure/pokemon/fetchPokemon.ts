@@ -39,7 +39,7 @@ const apiReturnToPokemon = (data: PokemonAPIReturn): Pokemon => {
   return {
     id: data.id,
     name: data.name,
-    sprite: data.sprites.front_default,
+    sprite: data.sprites.other['official-artwork'].front_default,
     type: pokemonTypeName,
   };
 };

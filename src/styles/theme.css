@@ -31,3 +31,93 @@ body {
   font-family: 'Poppins', sans-serif;
   color: var(--color-primary-font);
 }
+
+[data-pokemon-type='fairy' i] {
+  background: var(--color-pokemon-fairy);
+  border: 1px solid var(--color-pokemon-fairy);
+}
+
+[data-pokemon-type='ice' i] {
+  background: var(--color-pokemon-ice);
+  border: 1px solid var(--color-pokemon-ice);
+}
+
+[data-pokemon-type='grass' i] {
+  background: var(--color-pokemon-grass);
+  border: 1px solid var(--color-pokemon-grass);
+}
+
+[data-pokemon-type='steal' i] {
+  background: var(--color-pokemon-steal);
+  border: 1px solid var(--color-pokemon-steal);
+}
+
+[data-pokemon-type='rock' i] {
+  background: var(--color-pokemon-rock);
+  border: 1px solid var(--color-pokemon-rock);
+}
+
+[data-pokemon-type='dark' i] {
+  background: var(--color-pokemon-dark);
+  border: 1px solid var(--color-pokemon-dark);
+}
+
+[data-pokemon-type='psychic' i] {
+  background: var(--color-pokemon-psychic);
+  border: 1px solid var(--color-pokemon-psychic);
+}
+
+[data-pokemon-type='water' i] {
+  background: var(--color-pokemon-water);
+  border: 1px solid var(--color-pokemon-water);
+}
+
+[data-pokemon-type='ghost' i] {
+  background: var(--color-pokemon-ghost);
+  border: 1px solid var(--color-pokemon-ghost);
+}
+
+[data-pokemon-type='ground' i] {
+  background: var(--color-pokemon-ground);
+  border: 1px solid var(--color-pokemon-ground);
+}
+
+[data-pokemon-type='dragon' i] {
+  background: var(--color-pokemon-dragon);
+  border: 1px solid var(--color-pokemon-dragon);
+}
+
+[data-pokemon-type='electric' i] {
+  background: var(--color-pokemon-electric);
+  border: 1px solid var(--color-pokemon-electric);
+}
+
+[data-pokemon-type='fire' i] {
+  background: var(--color-pokemon-fire);
+  border: 1px solid var(--color-pokemon-fire);
+}
+
+[data-pokemon-type='bug' i] {
+  background: var(--color-pokemon-bug);
+  border: 1px solid var(--color-pokemon-bug);
+}
+
+[data-pokemon-type='poison' i] {
+  background: var(--color-pokemon-poison);
+  border: 1px solid var(--color-pokemon-poison);
+}
+
+[data-pokemon-type='flying' i] {
+  background: var(--color-pokemon-flying);
+  border: 1px solid var(--color-pokemon-flying);
+}
+
+[data-pokemon-type='fighting' i] {
+  background: var(--color-pokemon-fighting);
+  border: 1px solid var(--color-pokemon-fighting);
+}
+
+[data-pokemon-type='normal' i] {
+  background: var(--color-pokemon-normal);
+  border: 1px solid var(--color-pokemon-normal);
+}

@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { RouterProvider } from 'react-router-dom';
 
-import App from './App.tsx';
+import { router } from './routes.tsx';
+import { PokemonProvider } from './view/components/PokemonProvider.tsx';
 
 import '@fontsource/poppins';
 import './styles/reset.css';
@@ -9,6 +11,8 @@ import './styles/theme.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <PokemonProvider>
+      <RouterProvider router={router} />
+    </PokemonProvider>
   </React.StrictMode>
 );

@@ -1,15 +1,15 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter } from "react-router-dom";
 
-import PokeReels from './pages/PokeReels/PokeReels.tsx';
-import { HomePage } from './pages/HomePage/HomePage.tsx';
+import PokeReels from "./pages/PokeReels/PokeReels.tsx";
+import { HomePage } from "./pages/HomePage/HomePage.tsx";
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <HomePage />,
   },
   {
-    path: '/poke-reels',
+    path: "/poke-reels",
     element: <PokeReels />,
   },
 ]);

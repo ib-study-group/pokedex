@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useRef } from 'react';
+import { forwardRef, useCallback, useEffect, useRef } from 'react';
 
 import styles from './PokeReels.module.css';
 import { usePokeReels } from '../../view/hooks/usePokeReels';
+import { Pokemon } from '../../domain/Pokemon';
 
 export default function PokeReels() {
   const { pokemon, nextReels, isLoading } = usePokeReels();
@@ -36,19 +37,32 @@ export default function PokeReels() {
 
   return (
     <div className={styles.container}>
-      {pokemon.map(({ id, name, sprite }, index, array) => {
+      {pokemon.map((pokemonData, index, array) => {
         return array.length === index + 2 ? (
-          <div className={styles.card} key={id} ref={cardRef}>
-            <img src={sprite} alt={name} />
-            <p>{name}</p>
-          </div>
+          <PokemonCard
+            key={pokemonData.id}
+            pokemon={pokemonData}
+            ref={cardRef}
+          />
         ) : (
-          <div className={styles.card} key={id}>
-            <img src={sprite} alt={name} />
-            <p>{name}</p>
-          </div>
+          <PokemonCard key={pokemonData.id} pokemon={pokemonData} />
         );
       })}
     </div>
   );
 }
+
+type PokemonCardProps = {
+  pokemon: Pokemon;
+};
+
+const PokemonCard = forwardRef<HTMLDivElement, PokemonCardProps>(
+  ({ pokemon }, ref) => {
+    return (
+      <div className={styles.card} ref={ref}>
+        <img src={pokemon.sprite} alt={pokemon.name} />
+        <p>{pokemon.name}</p>
+      </div>
+    );
+  }
+);

@@ -25,6 +25,8 @@
   --color-pokemon-flying: #a891ec;
   --color-pokemon-fighting: #c12239;
   --color-pokemon-normal: #aaa67f;
+
+  --margin-card-image: 56px;
 }
 
 body {

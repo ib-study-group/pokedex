@@ -1,0 +1,74 @@
+.card {
+  scroll-snap-align: center;
+
+  padding: 0.25rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.25rem 1.25rem 0;
+}
+
+.header > p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 133%;
+
+  text-transform: capitalize;
+
+  color: var(--color-secondary-font);
+}
+
+.header > span {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 267%;
+
+  color: var(--color-secondary-font);
+}
+
+.pokemonImage {
+  height: 200px;
+  width: 200px;
+
+  margin: 24px auto calc(var(--margin-card-image) * -1) auto;
+  z-index: 2;
+}
+
+.detailsContainer {
+  flex: 1;
+
+  padding: var(--margin-card-image) 1.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-secondary-background);
+}
+
+.badges {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+
+}
+
+.badges > span {
+  width: fit-content;
+
+  padding: 0.125rem 0.5rem;
+
+  color: var(--color-secondary-font);
+  text-transform: capitalize;
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 100%;
+  border-radius: 0.625rem;
+}

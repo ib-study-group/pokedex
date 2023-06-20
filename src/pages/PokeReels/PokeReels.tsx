@@ -1,8 +1,9 @@
-import { forwardRef, useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
+
+import { ReelsCard } from '../../components/ReelsCard/ReelsCard';
+import { usePokeReels } from '../../view/hooks/usePokeReels';
 
 import styles from './PokeReels.module.css';
-import { usePokeReels } from '../../view/hooks/usePokeReels';
-import { Pokemon } from '../../domain/Pokemon';
 
 export default function PokeReels() {
   const { pokemon, nextReels, isLoading } = usePokeReels();
@@ -39,30 +40,11 @@ export default function PokeReels() {
     <div className={styles.container}>
       {pokemon.map((pokemonData, index, array) => {
         return array.length === index + 2 ? (
-          <PokemonCard
-            key={pokemonData.id}
-            pokemon={pokemonData}
-            ref={cardRef}
-          />
+          <ReelsCard key={pokemonData.id} pokemon={pokemonData} ref={cardRef} />
         ) : (
-          <PokemonCard key={pokemonData.id} pokemon={pokemonData} />
+          <ReelsCard key={pokemonData.id} pokemon={pokemonData} />
         );
       })}
     </div>
   );
 }
-
-type PokemonCardProps = {
-  pokemon: Pokemon;
-};
-
-const PokemonCard = forwardRef<HTMLDivElement, PokemonCardProps>(
-  ({ pokemon }, ref) => {
-    return (
-      <div className={styles.card} ref={ref}>
-        <img src={pokemon.sprite} alt={pokemon.name} />
-        <p>{pokemon.name}</p>
-      </div>
-    );
-  }
-);

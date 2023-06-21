@@ -7,18 +7,15 @@ const OFFSET_REQUEST = 9;
 
 export const usePokeReels = () => {
   const [pokemon, setPokemon] = useState<Pokemon[]>([]);
-  const [startPokemon, setStartPokemon] = useState<number>(1);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const nextReels = () => {
-    setStartPokemon((oldValue) => oldValue + OFFSET_REQUEST);
-  };
-
-  useEffect(() => {
+  const fetchReels = () => {
     setIsLoading(true);
 
-    fetchManyPokemon({ start: startPokemon, offset: OFFSET_REQUEST })
+    fetchManyPokemon({ start: pokemon.length + 1, offset: OFFSET_REQUEST })
       .then((result) => {
+        console.log("Acolá");
+
         setPokemon((oldValue) => {
           if (!oldValue.length) return result;
 
@@ -30,11 +27,15 @@ export const usePokeReels = () => {
         });
       })
       .finally(() => setIsLoading(false));
-  }, [startPokemon]);
+  };
+
+  useEffect(() => {
+    fetchReels();
+  }, []);
 
   return {
     pokemon,
-    nextReels,
+    fetchReels,
     isLoading,
   };
 };

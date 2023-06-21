@@ -5,11 +5,11 @@ import { HomePage } from "./pages/HomePage/HomePage.tsx";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/pokedex/",
     element: <HomePage />,
   },
   {
-    path: "/poke-reels",
+    path: "/pokedex/poke-reels",
     element: <PokeReels />,
   },
 ]);

@@ -1,0 +1,25 @@
+.layoutContainer {
+  display: grid;
+  grid-template-areas:
+    "main"
+    "navigation";
+  grid-template-rows: 1fr auto;
+  height: 100vh;
+}
+
+.main {
+  grid-area: main;
+  overflow-y: auto;
+}
+
+.navigation {
+  grid-area: navigation;
+}
+
+@media screen and (min-width: 1024px) {
+  .layoutContainer {
+    grid-template-areas: "navigation main";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: unset;
+  }
+}

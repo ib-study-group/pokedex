@@ -1,13 +1,12 @@
 import debounce from "lodash.debounce";
 import { useCallback, useEffect, useRef } from "react";
 
-import { ReelsCard } from "../../components/ReelsCard/ReelsCard";
 import { usePokeReels } from "../../view/hooks/usePokeReels";
 
+import { Layout } from "../../components/Layout/Layout";
+import { ReelsCard } from "../../components/ReelsCard/ReelsCard";
+
 import styles from "./PokeReels.module.css";
-import { Navigation } from "../../components/Navigation/Navigation";
-import { TbPokeball } from "react-icons/tb";
-import { MdOutlineSlowMotionVideo } from "react-icons/md";
 
 export default function PokeReels() {
   const { pokemon, fetchReels, isLoading } = usePokeReels();
@@ -37,19 +36,8 @@ export default function PokeReels() {
     };
   }, [scrollHandler]);
 
-  const tabs = [
-    {
-      link: "/",
-      icon: <TbPokeball />,
-    },
-    {
-      link: "/poke-reels",
-      icon: <MdOutlineSlowMotionVideo />,
-    },
-  ];
-
   return (
-    <div className={styles.container}>
+    <Layout className={styles.container}>
       {pokemon.map((pokemonData, index, array) => {
         const isPenultimateCard = array.length - 1 === index;
         return (
@@ -60,7 +48,6 @@ export default function PokeReels() {
           />
         );
       })}
-      <Navigation tabs={tabs} />
-    </div>
+    </Layout>
   );
 }

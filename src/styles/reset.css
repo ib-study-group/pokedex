@@ -40,3 +40,7 @@ body,
   /* max-height: 100vh; */
   height: 100%;
 }
+
+body {
+  overscroll-behavior-y: contain;
+}

@@ -17,7 +17,7 @@ export const PokemonProvider = ({ children }: PokemonProviderProps) => {
   const [pokemon, setPokemon] = useState<Pokemon[]>([]);
 
   useEffect(() => {
-    fetchManyPokemon({ start: 1, offset: 15 }).then((result) =>
+    fetchManyPokemon({ start: 1, offset: 3 }).then((result) =>
       setPokemon(result)
     );
   }, []);

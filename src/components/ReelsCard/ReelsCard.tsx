@@ -1,18 +1,23 @@
-import { forwardRef } from 'react';
+import { HTMLAttributes, forwardRef } from "react";
 
-import { Pokemon } from '../../domain/Pokemon';
+import { Pokemon } from "../../domain/Pokemon";
 
-import styles from './ReelsCard.module.css';
-import { numberPad } from '../../utils/numberPad';
+import styles from "./ReelsCard.module.css";
+import { numberPad } from "../../utils/numberPad";
 
-type ReelsCardProps = {
+type ReelsCardProps = HTMLAttributes<HTMLDivElement> & {
   pokemon: Pokemon;
 };
 
 export const ReelsCard = forwardRef<HTMLDivElement, ReelsCardProps>(
-  ({ pokemon }, ref) => {
+  ({ pokemon, ...props }, ref) => {
     return (
-      <div className={styles.card} ref={ref} data-pokemon-type={pokemon.type}>
+      <div
+        {...props}
+        className={styles.card}
+        ref={ref}
+        data-pokemon-type={pokemon.type}
+      >
         <header className={styles.header}>
           <p>{pokemon.name}</p>
           <span>#{numberPad(pokemon.id, 3)}</span>

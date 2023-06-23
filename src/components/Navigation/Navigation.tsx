@@ -15,6 +15,7 @@ export const Navigation = ({ className }: NavigationProps) => {
       {tabs.map((tab) => {
         return (
           <NavLink
+            key={tab.text}
             to={tab.link}
             className={({ isActive, isPending }) =>
               isPending
